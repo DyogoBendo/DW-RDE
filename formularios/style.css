@@ -1,0 +1,50 @@
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    border: solid 1px black;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td{
+    border: solid 1px black;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+thead{
+    background-color: rgb(167, 164, 164);
+    font-size: 20px;
+    text-align: center;
+    height: 100%;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+}
+[type = text], [type = email]{
+    width: 90%;
+}
+
+select{
+    width: 80%;
+}
+
+.enviar{
+    width: 25%;
+    text-align: center;
+}
+.limpar{
+    width: 75%;
+    text-align: center;
+}
+textarea{
+    width: 99%
+}
