@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario de cadastro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formulário de Contato</h1>
+    </header>
+    <div class="box-formulario">
+      <img src="./assets/writing-mail.jfif" alt="message" class="img-form" />
+      <form
+        action="email.php"
+        name="cadastro"
+        method="POST"
+        id="formulario"
+      >
+        <fieldset class="dados-pessoais">
+          <h1>Dados pessoais:</h1>
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" required />
+          <label for="sexo" id="sexo">Sexo</label>
+          <div class="sexo-radio">
+            <input type="radio" name="sexo" id="M" value="M" required />
+            <label for="M" id="M">Masculino</label>
+          </div>
+          <div class="sexo-radio">
+            <input type="radio" name="sexo" id="F" value="F" required />
+            <label for="F" id="F">Feminino</label>
+          </div>
+          <label for="mail" id="mail-label">Email</label>
+          <input type="email" name="mail" id="mail" required />
+          <label for="telefone">Telefone</label>
+          <input
+            type="tel"
+            name="telefone"
+            id="telefone"
+            pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"
+            placeholder="00 12345-6789"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <h1>Informações residenciais:</h1>
+          <label for="cidade">Cidade</label>
+          <input type="text" name="cidade" id="cidade" required />
+          <label for="estado">Estado</label>
+          <select name="estado" id="estado" required>
+            <option value="Acre">Acre</option>
+            <option value="Alagoas">Alagoas</option>
+            <option value="Amapá">Amapá</option>
+            <option value="Amazonas">Amazonas</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Ceará">Ceará</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Espírito Santo">Espírito Santo</option>
+            <option value="Goiás">Goiás</option>
+            <option value="Maranhão">Maranhão</option>
+            <option value="Mato Grosso">Mato Grosso</option>
+            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+            <option value="Minas Gerais">Minas Gerais</option>
+            <option value="Pará">Pará</option>
+            <option value="Paraíba">Paraíba</option>
+            <option value="Paraná">Paraná</option>
+            <option value="Pernambuco">Pernambuco</option>
+            <option value="Piauí">Piauí</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+            <option value="Rondônia">Rondônia</option>
+            <option value="Roraima">Roraima</option>
+            <option value="Santa Catarina">Santa Catarina</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Sergipe">Sergipe</option>
+            <option value="Tocantins">Tocantins</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <h1>Mensagem:</h1>
+          <label for="assunto">Assunto:</label>
+          <input type="text" name="assunto" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            cols="30"
+            rows="10"
+            placeholder="Escreva sua mensagem..."
+            required
+          ></textarea>
+
+          <div class="checkbox-area">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+              checked
+              required
+            />
+            <label for="checkbox">
+              Desejo receber confirmação de recebimento de mensagem</label
+            >
+          </div>
+          <div class="buttons-group">
+            <input type="submit" value="Enviar" id="send-button" />
+            <input
+              onclick="window.location.href='#formulario';"
+              type="reset"
+              value="Limpar Formulario"
+              id="clean-button"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
